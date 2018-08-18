@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#Sat Aug 18 11:00:45 CDT 2018
+
 repobase=www
 
 git init
