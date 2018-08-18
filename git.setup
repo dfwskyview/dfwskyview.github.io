@@ -6,19 +6,16 @@ git init
 git add .
 git commit -m "initial commit"
 
-#was
-#git remote add origin   https://github.com/dfwskyview/${repobase}.dfwskyview.com.git
- git remote add linuxtrader git@github.com:linuxtrader/${repobase}.dfwskyview.com.git
+# like a client page
+git remote add linuxtrader git@github.com:linuxtrader/${repobase}.dfwskyview.com.git
+# www by default
+git remote add origin https://github.com/dfwskyview/dfwskyview.github.io.git
 
-git push -u linuxtrader master
+# Force cause repo was old
+git push -u --force linuxtrader master
 git push
 
-#git pull linuxtrader master --allow-unrelated-histories
-#git push linuxtrader master
-
-# Then 
-#git push
-#plus
-#git push linuxtrader
-
+# Force cause repo was old
+git push -u --force origin master
+git push origin
 
