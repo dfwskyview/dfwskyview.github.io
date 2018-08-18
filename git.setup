@@ -21,3 +21,4 @@ git push
 git push -u --force origin master
 git push origin
 
+# Then edit .git/config if git push pts to origin instead of linuxtrader

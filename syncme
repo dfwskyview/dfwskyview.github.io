@@ -8,13 +8,19 @@ cd ~/Documents/aws/$mybase
 ./htmlmod
 
 # Cant use --delete here since there are multiple source locations
-# --exclude fails, so move git
+# --exclude fails, so just move git
+
+# First back it up
+echo; echo backing up current in 3..........................
+sleep 3
+aws s3 sync --delete s3://s3.dfwskyview.com/ s3://last.dfwskyview.com --acl public-read 
+
 
 # Sync basic web content
-#mv .git ../dfw_git
-echo Sync basics to s3.dfwskyview.com
+mv .git ../${mybase}_git
+echo Sync pages to s3.dfwskyview.com
 aws s3 sync  ~/Documents/aws/$mybase  s3://s3.dfwskyview.com/  --acl public-read 
-#mv ../dfw_git .git
+mv ../${mybase}_git .git
 
 # Sync media and zip files too
 echo Sync media to s3.dfwskyview.com
