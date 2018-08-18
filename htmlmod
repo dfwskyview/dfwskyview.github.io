@@ -1,0 +1,47 @@
+#!/bin/bash
+
+grep -q kuula index.html && echo Nothing to do && exit 0
+
+echo >> index.html
+cp index.html index.html.orig
+
+# Replace section info1-18
+sed '/id="info1-18"/,/<\/section>/ {
+/id="info1-18"/ i\
+<section class="mbr-section info1 cid-qCHkI48M2H" id="info1-18">\
+\
+\ \ \ \ <div class="container">\
+\ \ \ \ \ \ \ \ <div class="row justify-content-center content-row">\
+\ \ \ \ \ \ \ \ \ \ \ \ <div class="media-container-column title col-12 col-lg-7 col-md-6">\
+\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <h3 class="mbr-section-subtitle align-left mbr-light pb-3 mbr-fonts-style display-5"><br><br><br>Embed your own Interactive Portals...<br><br><br><br></h3>\
+\ \ \ \ \ \ \ \ \ \ \ \ </div>\
+\ \ \ \ \ \ \ \ \ \ \ \ <div class="media-container-column col-12 col-lg-3 col-md-4"> </div>\
+\ \ \ \ \ \ \ \ \ \ \ \ <div class="mbr-arrow hidden-sm-down" aria-hidden="true"> <a href="#next"> <i class="mbri-down mbr-iconfont"></i> </a> </div>\
+\ \ \ \ \ \ \ \ </div>\
+\ \ \ \ </div>\
+</section>
+d
+}' index.html > new.html
+
+
+# Replace section info1-19
+sed '/id="info1-19"/,/<\/section>/ {
+/id="info1-19"/ i\
+<section class="mbr-section info1 cid-qCHkKmZ3m1" id="info1-19">\
+\ \ \ \ <div class="container">\
+\ \ \ \ \ \ \ \ <div class="row justify-content-center content-row">\
+\ \ \ \ \ \ \ \ \ \ \ \ <script src="https://static.kuula.io/embed.js" data-kuula="https://kuula.co/share/collection/7fzmX?fs=1&vr=0&zoom=1&autorotate=0.24&thumbs=1&logopos=b2&margin=0&chromeless=0&logo=0" data-width="1024px" data-height="576px"></script>\
+\ \ \ \ \ \ \ \ \ \ \ \ <div class="media-container-column title col-12 col-lg-7 col-md-6">\
+\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <h3 class="mbr-section-subtitle align-left mbr-light pb-3 mbr-fonts-style display-5"><br>Go fullscreen, <br>then pan/zoom with mouse or arrow-keys.</h3>\
+\ \ \ \ \ \ \ \ \ \ \ \ </div>\
+\ \ \ \ \ \ \ \ \ \ \ \ <div class="media-container-column col-12 col-lg-3 col-md-4"> </div>\
+\ \ \ \ \ \ \ \ </div>\
+\ \ \ \ </div>\
+</section>
+d
+}' new.html > index.html
+
+rm new.html
+diff index.html.orig index.html
+
+exit 0

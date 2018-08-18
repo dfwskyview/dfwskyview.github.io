@@ -1,0 +1,17 @@
+#! /bin/bash
+
+# Seperate
+#aws cloudfront create-invalidation --distribution-id EL7DTH1RO9WMQ --paths "/samples/*"
+
+#aws cloudfront create-invalidation --distribution-id EL7DTH1RO9WMQ --paths "/5ks/*"
+#aws cloudfront create-invalidation --distribution-id EL7DTH1RO9WMQ --paths "/cabin/*"
+#aws cloudfront create-invalidation --distribution-id EL7DTH1RO9WMQ --paths "/clouds/*"
+#aws cloudfront create-invalidation --distribution-id EL7DTH1RO9WMQ --paths "/swa/*"
+#aws cloudfront create-invalidation --distribution-id EL7DTH1RO9WMQ --paths "/turkeys/*"
+#aws cloudfront create-invalidation --distribution-id EL7DTH1RO9WMQ --paths "/twells/*"
+
+# Do Together
+ aws cloudfront create-invalidation --distribution-id EL7DTH1RO9WMQ --paths /index.html /about.html /favs.html /project.mobirise
+ aws cloudfront create-invalidation --distribution-id EL7DTH1RO9WMQ --paths /publish-hashes.json 
+ aws cloudfront create-invalidation --distribution-id EL7DTH1RO9WMQ --paths "/assets/*"
+

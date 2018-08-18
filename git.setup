@@ -1,0 +1,24 @@
+#!/bin/bash
+
+repobase=www
+
+git init
+git add .
+git commit -m "initial commit"
+
+#was
+#git remote add origin   https://github.com/dfwskyview/${repobase}.dfwskyview.com.git
+ git remote add linuxtrader git@github.com:linuxtrader/${repobase}.dfwskyview.com.git
+
+git push -u linuxtrader master
+git push
+
+#git pull linuxtrader master --allow-unrelated-histories
+#git push linuxtrader master
+
+# Then 
+#git push
+#plus
+#git push linuxtrader
+
+
