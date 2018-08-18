@@ -19,6 +19,6 @@ git push
 
 # Force cause repo was old
 git push -u --force origin master
-git push origin
+git push --force origin
 
 # Then edit .git/config if git push pts to origin instead of linuxtrader
