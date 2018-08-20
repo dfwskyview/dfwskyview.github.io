@@ -1,6 +1,7 @@
 #!/bin/bash
 
 mybase=skyview
+today="`date '+%m%d%Y'`"
 
 cd ~/Documents/aws/$mybase
 
@@ -13,7 +14,8 @@ cd ~/Documents/aws/$mybase
 # First back it up
 echo; echo backing up current in 3..........................
 sleep 3
-aws s3 sync --delete s3://s3.dfwskyview.com/ s3://last.dfwskyview.com --acl public-read 
+aws s3 sync s3://s3.dfwskyview.com/ s3://last.dfwskyview.com/${today} --acl public-read 
+aws s3 sync s3://s3.dfwskyview.com/ s3://last.dfwskyview.com          --acl public-read 
 
 
 # Sync basic web content
