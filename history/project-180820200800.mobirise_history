@@ -43,14 +43,16 @@
     "favicon": "",
     "noImageResize": "",
     "path": "@PROJECT_PATH@",
-    "screenshot": "screenshot.png"
+    "screenshot": "screenshot.png",
+    "publishType": "local",
+    "publishPath": "file:///Users/danrose/Documents/aws/website"
   },
   "pages": {
     "index.html": {
       "settings": {
         "main": true,
-        "title": "dfwSkyview",
-        "meta_descr": "Dallas,  Fort Worth, Grand Prairie, Irving's best value for drone based aerial photos and videos.",
+        "title": "DFW SkyView",
+        "meta_descr": "Dallas,  Fort Worth, Grand Prairie, Arlington's best value for drone based aerial photos and videos.",
         "header_custom": "",
         "footer_custom": "",
         "html_before": ""
