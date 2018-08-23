@@ -1,27 +1,27 @@
 #!/bin/bash
 
-mybase=skyview
-today="`date '+%m%d%Y'`"
-
+mybase=website
 cd ~/Documents/aws/$mybase
 
-# Add stuff into the html
+today="`date '+%m%d%Y'`"
+
+# Add stuff into the html if missing
 ./htmlmod
 
-# Cant use --delete here since there are multiple source locations
-# --exclude fails, so just move git
-
 # First back it up
-echo; echo backing up current in 3..........................
-sleep 3
+echo; echo backing up current in 2..........................
+sleep 2
 aws s3 sync s3://s3.dfwskyview.com/ s3://last.dfwskyview.com/${today} --acl public-read 
 aws s3 sync s3://s3.dfwskyview.com/ s3://last.dfwskyview.com          --acl public-read 
 
 
-# Sync basic web content
+# Then Sync basic web content
+# Cant use --delete here since there are multiple source locations
+# --exclude fails, so just move git
 mv .git ../${mybase}_git
 echo Sync pages to s3.dfwskyview.com
 aws s3 sync  ~/Documents/aws/$mybase  s3://s3.dfwskyview.com/  --acl public-read 
+aws s3 rm s3://s3.dfwskyview.com/project.mobirise
 mv ../${mybase}_git .git
 
 # Sync media and zip files too
