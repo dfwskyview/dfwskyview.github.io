@@ -11,7 +11,7 @@
 #aws cloudfront create-invalidation --distribution-id EL7DTH1RO9WMQ --paths "/twells/*"
 
 # Do Together
- aws cloudfront create-invalidation --distribution-id EL7DTH1RO9WMQ --paths /index.html /about.html /favs.html /project.mobirise
+ aws cloudfront create-invalidation --distribution-id EL7DTH1RO9WMQ --paths /index.html /about.html /favs.html
  aws cloudfront create-invalidation --distribution-id EL7DTH1RO9WMQ --paths /publish-hashes.json 
  aws cloudfront create-invalidation --distribution-id EL7DTH1RO9WMQ --paths "/assets/*"
 

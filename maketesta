@@ -1,0 +1,10 @@
+#! /bin/bash
+
+./htmlmod
+git add .
+echo "What changes?"
+read ans 
+git commit -m "$ans"
+
+echo pushing to git origin,  git.dfwskyview.com
+git push origin
