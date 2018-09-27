@@ -8,3 +8,7 @@ git commit -m "$ans"
 
 echo pushing to git origin,  git.dfwskyview.com
 git push origin
+
+echo
+echo
+echo after some time, cofirm at http://git.dfwskyview.com

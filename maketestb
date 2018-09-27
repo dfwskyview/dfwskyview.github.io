@@ -1,0 +1,10 @@
+#! /bin/bash
+
+echo pushing to git remote, ie master
+echo This will be pulled by netlify
+echo
+git push 
+
+echo
+echo
+echo after some time, cofirm at http://skyview.dfwskyview.com
