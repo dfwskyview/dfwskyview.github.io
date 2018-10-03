@@ -11,23 +11,23 @@ today="`date '+%m%d%Y'`"
 # First back it up
 echo; echo backing up current in 2..........................
 sleep 2
-aws s3 sync s3://s3.dfwskyview.com/ s3://last.dfwskyview.com/${today} --acl public-read 
-aws s3 sync s3://s3.dfwskyview.com/ s3://last.dfwskyview.com          --acl public-read 
+aws s3 sync s3://www.dfwskyview.com/ s3://s3.dfwskyview.com/${today} --acl public-read 
+aws s3 sync s3://www.dfwskyview.com/ s3://s3.dfwskyview.com          --acl public-read 
 
 
 # Then Sync basic web content
 # Cant use --delete here since there are multiple source locations
 # --exclude fails, so just move git
 mv .git ../${mybase}_git
-echo Sync pages to s3.dfwskyview.com
-aws s3 sync  ~/Documents/aws/$mybase  s3://s3.dfwskyview.com/  --acl public-read 
-aws s3 rm s3://s3.dfwskyview.com/project.mobirise
+echo Sync pages to www.dfwskyview.com
+aws s3 sync  ~/Documents/aws/$mybase  s3://www.dfwskyview.com/
+aws s3 rm s3://www.dfwskyview.com/project.mobirise
 mv ../${mybase}_git .git
 
 # Sync media and zip files too
 # Cache-control to Ask client browsers to store video content
-echo Sync media to s3.dfwskyview.com
-aws s3 sync ~/Movies/dfwskyview/samples s3://s3.dfwskyview.com/samples  --acl public-read --cache-control max-age=31536000,public
+echo Sync media to www.dfwskyview.com
+aws s3 sync ~/Movies/dfwskyview/samples s3://www.dfwskyview.com/samples 
 
 
 echo Maybe do zip -r ../${mybase}45.zip .
