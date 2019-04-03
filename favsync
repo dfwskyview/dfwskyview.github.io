@@ -1,0 +1,11 @@
+#!/bin/bash
+
+excludes=" --exclude '.git/*' --exclude 'project.mobirise' --exclude '*/.DS_Store' "
+mybase=website
+cd ~/Documents/aws/$mybase
+
+echo Sync pages to www.dfwskyview.com
+eval aws s3 sync  ~/Documents/aws/$mybase  s3://www.dfwskyview.com/ ${excludes}
+#aws s3 rm s3://www.dfwskyview.com/project.mobirise
+
+echo Maybe run ./invalidate

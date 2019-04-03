@@ -11,7 +11,9 @@
 #aws cloudfront create-invalidation --distribution-id E3L4RITZ2SYT0U --paths "/twells/*"
 
 # Do Together
- aws cloudfront create-invalidation --distribution-id E3L4RITZ2SYT0U --paths /index.html /about.html /favs.html
+#aws cloudfront create-invalidation --distribution-id E3L4RITZ2SYT0U --paths /index.html /about.html /fav2.html
+ aws cloudfront create-invalidation --distribution-id E3L4RITZ2SYT0U --paths /index3.html 
  aws cloudfront create-invalidation --distribution-id E3L4RITZ2SYT0U --paths /publish-hashes.json 
- aws cloudfront create-invalidation --distribution-id E3L4RITZ2SYT0U --paths "/assets/*"
+ aws cloudfront create-invalidation --distribution-id E3L4RITZ2SYT0U --paths "/assets/dan/*"
+#aws cloudfront create-invalidation --distribution-id E3L4RITZ2SYT0U --paths "/assets/*"
 

@@ -23,3 +23,7 @@ git push -u --force origin master
 git push  origin
 
 # Then edit .git/config if git push pts to origin instead of linuxtrader
+
+# Create an alias for...
+git config --global alias.tree log --oneline --decorate --all --graph
+git tree
