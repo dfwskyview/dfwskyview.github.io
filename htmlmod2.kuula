@@ -1,0 +1,57 @@
+
+# Fix various on www page.
+# a. clean html </link></head> run-on.   (sed)
+# b. header background to allow non-youtube videos (.css .js)
+# c. wowslider title overrides     (.css)
+# d. make fav2.html a relative link (sed)
+# e. make favs.html like fav2 in case used somehow
+# f. add downarrows for video and kuula section (.css .js)
+# g. add kuula 360 (sed)
+
+grep -q myscript index.html && echo Nothing to do && exit 0
+grep -q mystyle  index.html && echo Nothing to do && exit 0
+grep -q kuula    index.html && echo Nothing to do && exit 0
+
+#more assets/dan/css/mystyle3.css assets/dan/js/myscript5.js
+
+# Backup the mobirise version
+cp index.html index.html.orig2
+cp fav2.html favs.html
+
+echo Fixing link_head run-on if still exists, and fav2.html.
+sed -e 's=</link></head>=</link> \
+</head>=' \
+    -e 's=https://dfwskyview.com/fav2.html=fav2.html=' index.html > new.html
+
+echo Adding mystyle.css and myscript.js
+sed -e '/<\/head>/i \
+\ \ <link rel="stylesheet" href="assets\/dan\/css\/mystyle4.css" type="text\/css"> \
+'   -e '/<\/body>/i \
+\ \ <script src="assets\/dan\/js\/myscript7.js"><\/script> \
+'   new.html > newer.html
+
+echo Adding Marzipano 360s
+# Replace section id=info1-19
+sed '/id="info1-19"/,/<\/section>/ {
+/id="info1-19"/ i\
+<section class="mbr-section info1 cid-qCHkKmZ3m1" id="info1-19">\
+\ \ \ \ <div class="container">\
+\ \ \ \ \ \ \ \ <div class="row justify-content-center content-row">\
+\ \ \ \ \ \ \ \ \ \ \ \ <script src="https://static.kuula.io/embed.js" data-kuula="https://kuula.co/share/collection/7fzmX?fs=1&vr=0&zoom=1&autorotate=0.24&thumbs=1&logopos=b2&margin=0&chromeless=0&logo=0" data-width="1024px" data-height="576px"></script>\
+\ \ \ \ \ \ \ \ \ \ \ \ <div class="media-container-column title col-12 col-lg-7 col-md-6">\
+\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <h3 class="mbr-section-subtitle align-left mbr-light pb-3 mbr-fonts-style display-5">Choose a neighborhood,<br>Swipe, &nbsp;pinch to zoom.</h3>\
+\ \ \ \ \ \ \ \ \ \ \ \ </div>\
+\ \ \ \ \ \ \ \ </div>\
+\ \ \ \ </div>\
+</section>
+d
+}' newer.html > index.html
+
+
+
+rm new.html newer.html
+echo; echo showing: diff index.html.orig2 index.html
+diff -w index.html.orig2 index.html
+
+echo; echo
+exit 0

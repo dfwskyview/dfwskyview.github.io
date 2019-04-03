@@ -1,0 +1,89 @@
+/*
+ Wed Nov  7 09:52:26 CST 2018
+ Style Overrides specific to a page or website
+ Easier than placing above the html all the time.
+ Set for mobile,  then find desktop overrides in jquery javascript....
+*/
+
+/* Main,only Navagation bar on this page by tag*/
+nav {
+  background-color: #cccccc !important;
+  background: linear-gradient(45deg, #cccccc, #192486)!important ;
+  padding: 0px !important;
+}
+
+/* Prevent sticky from moving */
+ .navbar-dropdown.navbar-short .navbar-logo {
+   margin-right: 0.8rem !important; 
+}
+
+/*  The specific section on this page if attribute present*/
+ section[data-bg-video] {
+  top: 84px;             /* mobile was 100  */
+  padding-top:     0;    /* desktop+mobile if postition: inherit, not absolute  */
+  padding-bottom: 78px;  /* mobile, was 90px */
+}
+
+@media only screen and (min-width: 800px) {
+ section[data-bg-video] {
+  top: 50px;            /* desktop */
+  padding-top:    0;    /* desktop */
+  padding-bottom: 0px;  /* desktop */
+ }
+}
+
+/* Marzpano to be fullwidth, and no mobile scroll-bar, despite container class*/
+  #info1-18 > div { 
+    max-width: 100% !important;
+    padding: 0px !important;
+    overflow: hidden !important;
+} 
+
+
+/*  Few overrides for mobirise background videos by class*/
+  .mbr-background-video {
+   width:100%;
+   height: auto;
+   position: inherit !important;
+}
+
+/*  Overrides for wowslider by class*/
+/*  Move playpause to bottom */
+  .mbr-wowslider-container--easy .mbr-wowslider .ws_playpause {
+   bottom: 2.5em;
+   top: unset;
+}
+/* Title on top out of the picture
+  .mbr-wowslider-container--easy .mbr-wowslider .ws-title{
+   padding: 20px !important;
+   top: 0px !important;
+}
+*/
+
+
+/*  Affects mobile devices*/
+  .modalWindow {
+   background-color: rgba(0, 0, 0, 1.00) !important;
+}
+
+/*  Full screen playback */
+  .modalWindow-video {
+   height: calc(56.24999vw) !important;
+   width: 100vw !important;
+   margin: 0 auto !important;
+}
+
+/*  Lowers the close button out of the menu */
+  a.close {
+   position: absolute !important;
+   right: 4vw !important;
+   top: 12vh !important;
+}
+
+/* Raises the down-arrow and darkens it, and insures clickable */
+  .mbr-arrow {
+   bottom: 85px !important;
+   background-color: rgba(80, 80, 80, 0.8) !important;
+   z-index: 1000;
+}
+
