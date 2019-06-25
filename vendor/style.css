@@ -433,13 +433,14 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
 /* Info hotspot */
 
 .info-hotspot {
+  bottom: 50px;
   line-height: 1.2em;
-  opacity: 0.9;
+  opacity: 1.0;
   -webkit-transition: opacity 0.2s 0.2s;
   transition: opacity 0.2s 0.2s;
 }
 
-.no-touch .info-hotspot:hover {
+.no-touch .info-hotspot {
   opacity: 1;
   -webkit-transition: opacity 0.2s;
   transition: opacity 0.2s;
@@ -453,7 +454,7 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   width: 40px;
   height: 40px;
   border-radius: 20px;
-  background-color: rgb(103,115,131);
+  background-color: rgba(0,0,0,0);
   cursor: pointer;
   -webkit-transition: width 0.3s ease-in-out 0.5s,
                       border-radius 0.3s ease-in-out 0.5s;
@@ -467,7 +468,7 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   border-radius: 25px;
 }
 
-.desktop.no-touch .info-hotspot .info-hotspot-header:hover {
+.info-hotspot .info-hotspot-header {
   width: 260px;
   border-radius: 5px;
   -webkit-transition: width 0.3s ease-in-out,
@@ -477,7 +478,7 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
 }
 
 .desktop .info-hotspot.visible .info-hotspot-header,
-.desktop.no-touch .info-hotspot.visible .info-hotspot-header:hover {
+         .info-hotspot.visible .info-hotspot-header {
   width: 260px;
   border-radius: 5px;
   border-top-right-radius: 0;
@@ -491,19 +492,19 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
 
 .info-hotspot .info-hotspot-icon-wrapper {
   width: 40px;
-  height: 40px;
+  height: 160px;
 }
 
 .mobile .info-hotspot .info-hotspot-icon-wrapper {
   width: 50px;
-  height: 50px;
 }
 
 .info-hotspot .info-hotspot-icon {
-  width: 90%;
-  height: 90%;
+  height: 105%;
   margin: 5%;
+  padding-bottom: 50px;
 }
+
 
 .info-hotspot .info-hotspot-title-wrapper {
   position: absolute;
@@ -519,8 +520,9 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
               padding 0s 0.4s;
 }
 
+.mobile  .info-hotspot.visible .info-hotspot-title-wrapper,
 .desktop .info-hotspot.visible .info-hotspot-title-wrapper,
-.desktop.no-touch .info-hotspot .info-hotspot-header:hover .info-hotspot-title-wrapper {
+         .info-hotspot .info-hotspot-header .info-hotspot-title-wrapper {
   width: 220px;
   padding: 0 5px;
   -webkit-transition: width 0s 0.4s,
@@ -539,7 +541,10 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
 .info-hotspot .info-hotspot-title {
   display: inline-block;
   vertical-align: middle;
-
+  text-shadow: -1px 1px 2px #000,
+	  1px 1px 2px #000,
+	  1px -1px 0 #000,
+	  -1px -1px 0 #000;
   -moz-user-select: text;
   -webkit-user-select: text;
   -ms-user-select: text;

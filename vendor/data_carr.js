@@ -33,7 +33,14 @@ var APP_DATA = {
         "fov": 1.568238662786406
       },
       "linkHotspots": [],
-      "infoHotspots": []
+      "infoHotspots": [
+        {
+          "yaw": -0.5109865692359996,
+          "pitch": 0.605874918819568,
+          "title": "Carr residence",
+          "text": "1021 Oakwood Circle, Keller TX"
+        }
+      ]
     },
     {
       "id": "1-carr-keller-tx",

@@ -10,7 +10,6 @@
 
 grep -q myscript index.html && echo Nothing to do && exit 0
 grep -q mystyle  index.html && echo Nothing to do && exit 0
-grep -q kuula    index.html && echo Nothing to do && exit 0
 
 #more assets/dan/css/mystyle3.css assets/dan/js/myscript5.js
 
@@ -39,7 +38,7 @@ sed '/id="info1-18"/,/<\/section>/ {
 \ \ \ \ \ \ \ \ <div class="row justify-content-center content-row">\
 \ \ \ \ \ \ \ \ \ \ \ \ <div class="media-container-column title col-12 col-lg-7 col-md-6">\
 \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <h3 class="mbr-section-subtitle align-left mbr-light pb-3 mbr-fonts-style display-5"><br>Aerial Panoramas show it all.<br></h3>\
-\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <iframe width="100%" height="500" allowfullscreen style="border-style:none;" src="marz.html"> </iframe>\
+\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <iframe width="100%" height="550" allowfullscreen style="border-style:none;" src="marz.html"> </iframe>\
 \ \ \ \ \ \ \ \ \ \ \ \ </div>\
 \ \ \ \ \ \ \ \ </div>\
 \ \ \ \ </div>\

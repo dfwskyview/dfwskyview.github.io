@@ -1,5 +1,7 @@
 #! /bin/bash
 
-#  aws cloudfront create-invalidation --distribution-id E3L4RITZ2SYT0U --paths /favs.html /fav2.html /fav3.html
-   aws cloudfront create-invalidation --distribution-id E3L4RITZ2SYT0U --paths /index.html /index3.html /assets/dan/* 
+   aws cloudfront create-invalidation --distribution-id E3L4RITZ2SYT0U --paths /fav2.html /fav3.html
+#  aws cloudfront create-invalidation --distribution-id E3L4RITZ2SYT0U --paths /index.html /index3.html /index4.html
+#  aws cloudfront create-invalidation --distribution-id E3L4RITZ2SYT0U --paths /tiles/0-carr-keller-tx/*
+#  aws cloudfront create-invalidation --distribution-id E3L4RITZ2SYT0U --paths /vendor/data_carr.js
 

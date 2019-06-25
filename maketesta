@@ -1,6 +1,6 @@
 #! /bin/bash
 
-./htmlmod
+./htmlmod2
 git add .
 echo "What changes?"
 read ans 
@@ -11,4 +11,4 @@ git push origin
 
 echo
 echo
-echo after some time, cofirm at http://git.dfwskyview.com
+echo after some time, confirm at http://git.dfwskyview.com
