@@ -1,0 +1,29 @@
+#!/bin/bash
+
+#Sat August 18 11:00:46 CDT 2018
+
+repobase=www
+
+git init
+git add .
+git commit -m "initial commit"
+
+# like a client page
+git remote add linuxtrader git@github.com:linuxtrader/${repobase}.dfwskyview.com.git
+# www by default
+git remote add origin https://github.com/dfwskyview/dfwskyview.github.io.git
+
+# Force initially, not sure why, perhaps it had CNAME file like below.
+git push -u --force linuxtrader master
+git push
+
+# Force cause github had a CNAME file. git pull origin master retreieved the CNAME file created by github,
+# as required by github web site.
+git push -u --force origin master
+git push  origin
+
+# Then edit .git/config if git push pts to origin instead of linuxtrader
+
+# Create an alias for...
+git config --global alias.tree log --oneline --decorate --all --graph
+git tree

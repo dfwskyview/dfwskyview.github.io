@@ -1,0 +1,7 @@
+#! /bin/bash
+
+echo pushing to git origin,  git.dfwskyview.com
+git push origin
+
+echo
+echo after some time, confirm at http://git.dfwskyview.com

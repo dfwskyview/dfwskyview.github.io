@@ -1,0 +1,21 @@
+#!/bin/bash
+
+AWS_PROFILE=default
+
+excludes=" --exclude '.CFid' --exclude 'README.md' --exclude 'index.html.orig'  --exclude '.git/*' --exclude 'project.*' --exclude '.DS_Store' "
+
+flags="--no-follow-symlinks "
+
+base="`basename $PWD`"
+subdomain=${base}.dfwskyview.com
+
+
+# NOT Using --delete here since bucket has much historical info.
+echo Syncing all content to $subdomain
+eval aws s3 sync . s3://${subdomain} ${excludes} ${flags}
+
+echo
+echo skipped all of...
+find . -type l
+echo
+echo DONT run ./invalidate UNTIL after review on netlify.
