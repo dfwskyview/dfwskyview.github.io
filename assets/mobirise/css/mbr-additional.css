@@ -1373,29 +1373,21 @@ body {
 .dropup .dropdown-toggle::after {
   display: none;
 }
-.cid-qCHkI48M2H {
-  padding-top: 0px;
-  padding-bottom: 0px;
-  background-color: #d9d7d7;
+.cid-qBcm7W8Kdj {
+  padding-top: 135px;
+  padding-bottom: 135px;
 }
-.cid-qCHkI48M2H .mbr-section-subtitle {
-  color: #8c0e0e;
+.cid-qBcm7W8Kdj .mbr-text,
+.cid-qBcm7W8Kdj .mbr-section-btn {
+  color: #ffffff;
+  text-align: left;
+}
+.cid-qBcm7W8Kdj H3 {
+  color: #192486;
   text-align: center;
 }
-.cid-qCHkI48M2H .btn {
-  margin: 0 0 .5rem 0;
-}
-.cid-qCHkKmZ3m1 {
-  padding-top: 0px;
-  padding-bottom: 15px;
-  background-color: #d9d7d7;
-}
-.cid-qCHkKmZ3m1 .mbr-section-subtitle {
-  color: #8c0e0e;
-  text-align: center;
-}
-.cid-qCHkKmZ3m1 .btn {
-  margin: 0 0 .5rem 0;
+.cid-qBcm7W8Kdj SPAN {
+  color: #192486;
 }
 .cid-qBcm7V33xJ .navbar {
   padding: .5rem 0;
@@ -1929,10 +1921,13 @@ body {
   color: #232323;
 }
 .cid-qBo7flqvYT LI {
-  color: #a91818;
+  color: #232323;
 }
 .cid-qBo7flqvYT .plan-title {
   color: #4224a1;
+}
+.cid-qBo7flqvYT I {
+  color: #8c0e0e;
 }
 .cid-rmf3yGnjBF {
   padding-top: 0px;
@@ -1946,21 +1941,29 @@ body {
 .cid-rmf3yGnjBF .btn {
   margin: 0 0 .5rem 0;
 }
-.cid-qBcm7W8Kdj {
-  padding-top: 135px;
-  padding-bottom: 135px;
+.cid-qCHkI48M2H {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  background-color: #d9d7d7;
 }
-.cid-qBcm7W8Kdj .mbr-text,
-.cid-qBcm7W8Kdj .mbr-section-btn {
-  color: #ffffff;
-  text-align: left;
-}
-.cid-qBcm7W8Kdj H3 {
-  color: #192486;
+.cid-qCHkI48M2H .mbr-section-subtitle {
+  color: #8c0e0e;
   text-align: center;
 }
-.cid-qBcm7W8Kdj SPAN {
-  color: #192486;
+.cid-qCHkI48M2H .btn {
+  margin: 0 0 .5rem 0;
+}
+.cid-qCHkKmZ3m1 {
+  padding-top: 0px;
+  padding-bottom: 15px;
+  background-color: #d9d7d7;
+}
+.cid-qCHkKmZ3m1 .mbr-section-subtitle {
+  color: #8c0e0e;
+  text-align: center;
+}
+.cid-qCHkKmZ3m1 .btn {
+  margin: 0 0 .5rem 0;
 }
 .cid-qBcO0fXVkP {
   padding-top: 30px;
@@ -2061,6 +2064,9 @@ body {
 }
 .cid-qBhZbScNut H5 {
   color: #ffffff;
+}
+.cid-qBhZbScNut .copyright > p {
+  color: #f9f295;
 }
 .cid-qBlLetmMyo {
   padding-top: 15px;

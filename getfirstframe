@@ -1,2 +1,0 @@
-ffmpeg -i CelinaSplash00LD.mp4 -vf "select=eq(n\,0)" -q:v 5 celinasplashposter.jpg
-ffmpeg -i CelinaFest03LD.mp4 -ss 00:00:00.001 -vframes 1 celinafestposter.jpg
