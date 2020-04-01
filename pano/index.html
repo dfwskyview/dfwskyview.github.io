@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>State Fair</title>
+    <link rel="stylesheet" href="https://cdn.pannellum.org/2.4/pannellum.css"/>
+    <script type="text/javascript" src="https://cdn.pannellum.org/2.4/pannellum.js"></script>
+    <style>
+    #panorama {
+        width: 800px;
+        height: 600px;
+    }
+    </style>
+</head>
+<body>
+
+<div id="panorama"></div>
+<script>
+pannellum.viewer('panorama', {
+    "type": "multires",
+    "multiRes": {
+        "basePath": "/pano/tiles",
+        "path": "/%l/%s/%y/%x",
+        "fallbackPath": "/pano/failback/%s",
+        "extension": "jpg",
+        "tileResolution": 512,
+        "maxLevel": 4,
+        "cubeResolution": 4096
+    }
+});
+</script>
+
+</body>
+</html>
