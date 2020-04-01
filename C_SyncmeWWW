@@ -4,13 +4,13 @@ AWS_PROFILE=default
 
 excludes=" --exclude '.CFid' --exclude 'README.md' --exclude 'index.html.orig'  --exclude '.git/*' --exclude 'project.*' --exclude '.DS_Store' "
 
-flags="--no-follow-symlinks "
+flags="--no-follow-symlinks --delete "
 
 base="`basename $PWD`"
 subdomain=${base}.dfwskyview.com
 
 
-# NOT Using --delete here since bucket has much historical info.
+# Using --delete here since bucket is all synced now.
 echo Syncing all content to $subdomain
 eval aws s3 sync . s3://${subdomain} ${excludes} ${flags}
 
