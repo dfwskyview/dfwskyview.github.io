@@ -43,7 +43,9 @@
     "favicon": "",
     "noImageResize": "true",
     "path": "@PROJECT_PATH@",
-    "screenshot": "screenshot.png"
+    "screenshot": "screenshot.png",
+    "publishType": "local",
+    "publishPath": "file:///Users/danrose/dfwSkyview/sites/www"
   },
   "pages": {
     "index.html": {
