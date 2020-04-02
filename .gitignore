@@ -7,7 +7,6 @@ sb_data/
 media/
 samples/
 index.html.orig
-project.mobirise
 0_DeployatAWS
 1_StoreCFid
 2_Git.setup
