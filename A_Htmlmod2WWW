@@ -13,7 +13,7 @@ grep -q mystyle  index.html && echo Nothing to do && exit 0
 
 # Backup the mobirise version
 cp index.html index.html.orig
-cp fav2.html favs.html
+rm favs.html about.prior.html
 
 echo Fixing link_head run-on if still exists, and fav2.html.
 sed -e 's=</link></head>=</link> \
