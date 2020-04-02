@@ -43,7 +43,9 @@
     "favicon": "",
     "noImageResize": "true",
     "path": "@PROJECT_PATH@",
-    "screenshot": "screenshot.png"
+    "screenshot": "screenshot.png",
+    "publishType": "local",
+    "publishPath": "file:///Users/danrose/dfwSkyview/sites/www"
   },
   "pages": {
     "index.html": {
@@ -757,6 +759,16 @@
                 "active": false
               },
               {
+                "image": "@PROJECT_PATH@/assets/images/dji-0214web-877x576.jpg",
+                "linkUrl": "http://google.com",
+                "link": false,
+                "src": "@PROJECT_PATH@/assets/images/dji-0214web.jpg",
+                "tooltip": "@PROJECT_PATH@/assets/images/dji-0214web-73x48.png",
+                "title": "",
+                "text": "",
+                "active": false
+              },
+              {
                 "image": "@PROJECT_PATH@/assets/images/dji-0915b-3-1024x576.jpg",
                 "linkUrl": "http://google.com",
                 "link": false,
@@ -797,6 +809,16 @@
                 "active": false
               },
               {
+                "image": "@PROJECT_PATH@/assets/images/celinafire1sm-864x576.jpg",
+                "linkUrl": "http://google.com",
+                "link": false,
+                "src": "@PROJECT_PATH@/assets/images/celinafire1sm.jpg",
+                "tooltip": "@PROJECT_PATH@/assets/images/celinafire1sm-72x48.png",
+                "title": "Site Status",
+                "text": "",
+                "active": false
+              },
+              {
                 "image": "@PROJECT_PATH@/assets/images/dji-0181afin2-1024x576.jpg",
                 "linkUrl": "http://google.com",
                 "link": false,
@@ -804,7 +826,7 @@
                 "tooltip": "@PROJECT_PATH@/assets/images/dji-0181afin2-85x47.png",
                 "title": "DBU Campus",
                 "text": "",
-                "active": false
+                "active": true
               },
               {
                 "image": "@PROJECT_PATH@/assets/images/dji-0816afprint2-1024x576.jpg",
@@ -815,26 +837,6 @@
                 "title": "",
                 "text": "",
                 "active": false
-              },
-              {
-                "image": "@PROJECT_PATH@/assets/images/celinafire1med-864x576.jpg",
-                "linkUrl": "http://google.com",
-                "link": false,
-                "src": "@PROJECT_PATH@/assets/images/celinafire1med.jpg",
-                "tooltip": "@PROJECT_PATH@/assets/images/celinafire1med-72x48.png",
-                "title": "Community Events",
-                "text": "",
-                "active": false
-              },
-              {
-                "image": "@PROJECT_PATH@/assets/images/dji-0214webmed-878x576.jpg",
-                "linkUrl": "http://google.com",
-                "link": false,
-                "src": "@PROJECT_PATH@/assets/images/dji-0214webmed.jpg",
-                "tooltip": "@PROJECT_PATH@/assets/images/dji-0214webmed-73x48.png",
-                "title": "",
-                "text": "",
-                "active": true
               }
             ],
             "fullScreen": true,
