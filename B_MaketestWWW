@@ -1,7 +1,10 @@
 #! /bin/bash
 
-echo pushing to git origin,  git.dfwskyview.com
-git push origin
+echo pushing to backup repo
+git push backup
+
+echo pushing to preview repo, git.dfwskyview.com
+git push
 
 echo
 echo after some time, confirm at http://git.dfwskyview.com
